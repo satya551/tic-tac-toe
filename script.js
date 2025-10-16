@@ -110,7 +110,6 @@ for(let l=0;l<=17;l++){
             cellVaArr[cellNo].style.color=" rgba(231, 239, 15, 1)";
             moveTurn.innerText="Now move for : O";
             turn=0;
-           
         }
     //     if(cond1 || cond2 || cond3 || cond4 || cond5 || cond6 || cond15 || cond16 ){
     //     alert("O player win the game");
