@@ -66,7 +66,15 @@ input[type="radio"]{
     font-weight: bolder;
     font-size: larger;
 }
-#head{
+#choice-con{
+    display: flex;
+    justify-content: space-evenly;
+    width: 900px;
+    height: 100px;
+    margin-left: 150px;
+
+}
+.head{
         color: rgb(52, 253, 6);
 }
 .btncon{
