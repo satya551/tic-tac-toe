@@ -52,6 +52,8 @@ body{
 } */
 #switchBtn{
     background-color: white;
+    margin-top: 10px;
+    margin-right: 10px;
     position: absolute;
     right:0;
     top:0;
@@ -70,14 +72,18 @@ input[type="radio"]{
     display: flex;
     justify-content: space-evenly;
     width: 900px;
-    height: 100px;
+    height: 50px;
     margin-left: 150px;
 
 }
 .head{
-        color: rgb(52, 253, 6);
+        color: rgb(211, 252, 145);
 }
-.btncon{
-    background-color: rgb(77, 79, 47);
-    width: 100px;
+.chance-tell{
+    color: brown;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    margin-left: 40%;
+    font-size: 20px;
 }

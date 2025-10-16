@@ -2,18 +2,19 @@
 let player1,player2;
 let player1Choices=document.querySelectorAll('input[type="radio"]');
 let choiceCont=document.querySelector("#choice-con");
-player1Choices.forEach(player1Choice=>{
-    player1Choice.addEventListener("change",()=>{
+let moveTurn=document.querySelector(".chance-tell");
+// player1Choices.forEach(player1Choice=>{
+//     player1Choice.addEventListener("change",()=>{
         
-        let newpara= document.createElement("p");
-        newpara.setAttribute("class","playPara");
+//         let newpara= document.createElement("p");
+//         newpara.setAttribute("class","playPara");
         
-        newpara.innerText=`player-1 choice is:'${player1Choice.value}'`;
+//         newpara.innerText=`player-1 choice is:'${player1Choice.value}'`;
 
-        choiceCont.appendChild(newpara);
+//         choiceCont.appendChild(newpara);
 
-    });
-});
+//     });
+// });
 let gridCont=document.querySelectorAll(".grid-cont");
 let cell=document.querySelectorAll(".cell");
 let oBtn=document.querySelectorAll(".O");
@@ -97,6 +98,8 @@ for(let l=0;l<=17;l++){
             cellVaArr[cellNo].replaceChildren();
             cellVaArr[cellNo].innerText="O";
             cellVaArr[cellNo].style.color="#fb0e1aff";
+            // moveTurn.innerText=moveTurn.innerText.slice(0,-4);
+            moveTurn.innerText="Now move for : X";
             
             turn=1;
         }
@@ -105,7 +108,9 @@ for(let l=0;l<=17;l++){
             cellVaArr[cellNo].replaceChildren();
             cellVaArr[cellNo].innerText="X";
             cellVaArr[cellNo].style.color=" rgba(231, 239, 15, 1)";
+            moveTurn.innerText="Now move for : O";
             turn=0;
+           
         }
     //     if(cond1 || cond2 || cond3 || cond4 || cond5 || cond6 || cond15 || cond16 ){
     //     alert("O player win the game");
@@ -151,7 +156,7 @@ mode.addEventListener("click",()=>{
      mode.innerText="Dark";
      mode.style.color="white";
      mode.style.backgroundColor="black";
-     document.querySelector("#head").style.color=" rgb(5, 74, 2)";
+     document.querySelectorAll(".head").forEach((ele)=>ele.style.color="rgba(47, 164, 218, 1)");
      
     }
     else{
@@ -161,7 +166,7 @@ mode.addEventListener("click",()=>{
      mode.innerText="Light";
      mode.style.color="black";
      mode.style.backgroundColor="white";
-     document.querySelector("#head").style.color=" rgb(18, 235, 11)";
+     document.querySelectorAll(".head").forEach((ele)=>ele.style.color = "rgba(215, 241, 15, 1)");
     }
 
 });
